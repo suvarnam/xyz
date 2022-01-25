@@ -1,0 +1,7 @@
+FROM Jenkins:latest
+LABEL maintainer=”oc@gmail.com”
+USER root
+ENV JAVA_OPTS="-Xmx4096m"
+ENV JENKINS_OPTS=" --handlerCountMax=200"
+RUN mkdir /var/log/jenkins-log
+EXPOSE 8080
